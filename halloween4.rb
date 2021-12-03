@@ -1,11 +1,7 @@
 def halloween(dt)
-    
-   dt == "10/31" ? "Bonfire toffee" : "toffee"
-    
+   dt = dt[5..9]
+   dt == "10/31" ? "Bonfire toffee" : "toffee"   
 end
     
-x = gets
-x = x[5..9]
-
-     
+x = gets 
 halloween(x)
