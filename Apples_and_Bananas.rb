@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class String
   def vreplace(r)
-	gsub!(/[aeoui]/, r)
+    gsub!(/[aeoui]/, r)
   end
 end
 

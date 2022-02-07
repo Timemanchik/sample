@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 def hacker_speak(str)
-  str.gsub!(/[a]/, "4")
-  str.gsub!(/[e]/, "3")
-  str.gsub!(/[i]/, "1")
-  str.gsub!(/[o]/, "0")
-  str.gsub!(/[s]/, "5")
-  return str
+  str.gsub!(/a/, '4')
+  str.gsub!(/e/, '3')
+  str.gsub!(/i/, '1')
+  str.gsub!(/o/, '0')
+  str.gsub!(/s/, '5')
+  str
 end
 
 # Create a function that takes a string as an argument and returns a coded (h4ck3r 5p34k) version of the string.

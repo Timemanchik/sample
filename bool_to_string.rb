@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 def bool_to_string(flag)
-	flag ? "true" : "false"
+  flag ? 'true' : 'false'
 end
-x = gets
-bool_to_string(x)
+x = 'dsdd'
+p bool_to_string(x)

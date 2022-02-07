@@ -1,17 +1,21 @@
+# frozen_string_literal: true
+
 class Plant
-    def initialize(title)
-        @title = title
-    end
-    
-    def full_title
-        puts "The plant's title is #{@title}"
-    end
+  def initialize(title)
+    @title = title
+  end
+
+  def full_title
+    puts "The plant's title is #{@title}"
+  end
 end
 
 class Tree < Plant
 end
+
 class Grass < Plant
 end
+
 class Bush < Plant
 end
 
@@ -23,4 +27,3 @@ kashtan = Tree.new('Canada kashtan')
 puts kashtan.full_title
 barbaris = Bush.new('Chine barbaris')
 puts barbaris.full_title
-

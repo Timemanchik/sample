@@ -1,16 +1,18 @@
+# frozen_string_literal: true
+
 def flip_end_chars(str)
-  z = ""
-  if !str.is_a? (String)
-	"Incompatible."
+  z = ''
+  if !str.is_a?(String)
+    'Incompatible.'
   elsif str.length < 2
-	"Incompatible."
-  elsif str[0] == str[str.length() - 1]
-	"Two's a pair."
+    'Incompatible.'
+  elsif str[0] == str[str.length - 1]
+    "Two's a pair."
   else
-	z = str[0]
-	str[0] = str[str.length() - 1]
-	str[str.length() - 1] = z
-	return str
+    z = str[0]
+    str[0] = str[str.length - 1]
+    str[str.length - 1] = z
+    str
   end
 end
 

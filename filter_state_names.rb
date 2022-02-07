@@ -1,21 +1,24 @@
+# frozen_string_literal: true
+
 def filter_state_names(arr, type)
   n = 0
-  for i in 0.. arr.length() - 1
-    if type == "abb" 
-      arr[i-n] != arr[i-n].upcase() ? arr.delete_at(i-n) && n += 1 : arr[i-n] = arr[i - n]
-    elsif type == "full"
-      arr[i-n] == arr[i-n].upcase() ? arr.delete_at(i-n) && n += 1 : arr[i-n] = arr[i - n]
+  (0..arr.length - 1).each do |i|
+    case type
+    when 'abb'
+      arr[i - n] != arr[i - n].upcase ? arr.delete_at(i - n) && n += 1 : arr[i - n] = arr[i - n]
+    when 'full'
+      arr[i - n] == arr[i - n].upcase ? arr.delete_at(i - n) && n += 1 : arr[i - n] = arr[i - n]
     end
   end
-  return arr
+  arr
 end
 x = Array[]
 y = gets.to_i
-for el in 0.. y - 1
+(0..y - 1).each do |el|
   x[el] = gets
 end
-z = gets.chomp()
-z == "abb" || z == "full" ? filter_state_names(x, z) : puts("error")
+z = gets.chomp
+%w[abb full].include?(z) ? filter_state_names(x, z) : puts('error')
 
 # Create a function that filters out an array of state names into two categories based on the second parameter.
 

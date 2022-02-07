@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def longest_time(h, m, s)
   h *= 3600
   m *= 60
@@ -7,7 +9,7 @@ def longest_time(h, m, s)
     m / 60
   else
     s
-  end	
+  end
 end
 
 # Create a function that takes three values:

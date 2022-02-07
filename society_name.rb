@@ -1,19 +1,14 @@
+# frozen_string_literal: true
+
 def society_name(friends)
-  d = ""
-  friends = friends.sort {|x,y| x.to_s <=> y.to_s}
-  for i in 0.. friends.length() - 1
-    z = friends[i]
-    d += z[0]
-  end
-  d.upcase()
+  friends.sort.map { |el| el[0] }.join
 end
-x = Array[]
+x = []
 y = gets.to_i
-for el in 0.. (y - 1)
+y.times do |el|
   x[el] = gets
 end
-society_name(x)
-
+p society_name(x)
 
 # A group of friends have decided to start a secret society. The name will be the first letter of each of their names, sorted in alphabetical order.
 

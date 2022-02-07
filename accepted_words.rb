@@ -1,9 +1,11 @@
-def accepted_words(arr)	
-    arr.delete_if {|x| x.include? "C" }
+# frozen_string_literal: true
+
+def accepted_words(arr)
+  arr.delete_if { |x| x.include? 'C' }
 end
-x = Array.new
+x = []
 y = gets.to_i
-for el in 0.. (y - 1)
-	x[el] = gets
+(0..(y - 1)).each do |el|
+  x[el] = gets
 end
 accepted_words(x)
